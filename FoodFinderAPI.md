@@ -14,10 +14,12 @@
   - [Deleting a restaurant](#Deleting-a-restaurant)
 
 ## Overview
-The FoodFinder API provides information about restaurants, including restaurant location, cuisine, price range and rating. Our API is organized around REST and returns JSON-formatted responses along with standard HTTP response codes. All requests are made to endpoints beginning:
+The FoodFinder API provides information about restaurants, including restaurant location, cuisine, price range and rating. Our API is organized around REST and returns JSON-formatted responses along with standard HTTP response codes. 
+
+All requests are made to endpoints beginning:  
 `https://foodfinder.com`
 
-All requests must use `https` to be secure. Do not use `http`.
+All requests must use `https` to be secure. Do **NOT** use `http`.
 
 ### Authentication
 No authentication is required to access resources for this API.
