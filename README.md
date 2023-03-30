@@ -4,7 +4,7 @@
 
 
 ## Requirements
-To run the FoodFinder application, you will need the `Node.js v14`+.
+To run the FoodFinder application, you will need to install `Node.js v14`+.
 
 ## Installation
 - git clone the repository
