@@ -1,3 +1,6 @@
+> **Warning**
+> **The FoodFinder API is no longer supported.** The database deployment and maintenance period has ended for this project.
+
 # FoodFinder API
 
 ## Contents
