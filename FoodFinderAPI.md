@@ -59,18 +59,18 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-	"data": [{
-			"id": 1,
-			"restaurant_name": "Cookie Time",
-			"street": "456 West Avenue",
-			"city": "San Jose",
-			"state": "CA",
-			"cuisine": "Dessert",
-			"price": "4-9"
-		}, {
-			"id": 2,
-			....
-		}]
+  "data": [{
+      "id": 1,
+      "restaurant_name": "Cookie Time",
+      "street": "456 West Avenue",
+      "city": "San Jose",
+      "state": "CA",
+      "cuisine": "Dessert",
+      "price": "4-9"
+    }, {
+      "id": 2,
+      ...
+  }]
 }
 ```
 
@@ -115,15 +115,15 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-	"data": [{
-			"id": 1,
-			"restaurant_name": "Cookie Time",
-			"street": "456 West Avenue",
-			"city": "San Jose",
-			"state": "CA",
-			"cuisine": "Dessert",
-			"price": "4-9"
-		}]
+  "data": {
+      "id": 1,
+      "restaurant_name": "Cookie Time",
+      "street": "456 West Avenue",
+      "city": "San Jose",
+      "state": "CA",
+      "cuisine": "Dessert",
+      "price": "4-9"
+    }
 }
 ```
 
@@ -184,18 +184,18 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-	"data": [{
-			"id": 2,
-			"restaurant_name": "Cream",
-			"street": "789 East Avenue",
-			"city": "San Jose",
-			"state": "CA",
-			"cuisine": "Dessert",
-			"price": "1-3"
-		}, {
-			"id": 2,
-			....
-		}]
+  "data": [{
+      "id": 2,
+      "restaurant_name": "Cream",
+      "street": "789 East Avenue",
+      "city": "San Jose",
+      "state": "CA",
+      "cuisine": "Dessert",
+      "price": "1-3"
+    }, {
+      "id": 2,
+      ...
+    }]
 }
 ```
 
@@ -250,15 +250,15 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-	"data": [{
-			"id": 225,
-			"restaurant_name": "Pizza Palace",
-			"street": "123 South Street",
-			"city": "San Jose",
-			"state": "CA",
-			"cuisine": "Italian",
-			"price": "4-9"
-		}]
+  "data": {
+      "id": 225,
+      "restaurant_name": "Pizza Palace",
+      "street": "123 South Street",
+      "city": "San Jose",
+      "state": "CA",
+      "cuisine": "Italian",
+      "price": "4-9"
+    }
 }
 ```
 
@@ -317,15 +317,15 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-	"data": [{
-			"id": 225,
-			"restaurant_name": "Pizza Palace",
-			"street": "123 South Street",
-			"city": "San Jose",
-			"state": "CA",
-			"cuisine": "Italian",
-			"price": "2-5"
-		}]
+  "data": {
+      "id": 225,
+      "restaurant_name": "Pizza Palace",
+      "street": "123 South Street",
+      "city": "San Jose",
+      "state": "CA",
+      "cuisine": "Italian",
+      "price": "2-5"
+    }
 }
 ```
 
@@ -370,8 +370,8 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-	"status": success
-	"message": "Successfully deleted restaurant with id: 225."
+  "status": success
+  "message": "Successfully deleted restaurant with id: 225."
 }
 ```
 
