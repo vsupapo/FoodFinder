@@ -38,7 +38,7 @@ Possible response codes include:
 ## Resources
 
 ### Getting all restaurants
-This endpoint returns the details of all restaurants. The response contains a list of Restaurant objects within a data envelope.
+This endpoint returns the details of all restaurants.
 
 ```
 GET https://foodfinder.com/restaurants
@@ -51,15 +51,14 @@ curl -I -X GET https://foodfinder.com/restaurants
 ```
 
 Example response:
-The following is an example response from the /restaurants endpoint:
+The response contains a list of Restaurant objects within a data envelope. The following is an example response from the /restaurants endpoint:
 
 ```
 HTTP 200 OK
 Content-Type: application/json
 
 {
-	"data": [
-		{
+	"data": [{
 			"id": 1,
 			"restaurant_name": "Cookie Time",
 			"street": "456 West Avenue",
@@ -70,23 +69,77 @@ Content-Type: application/json
 		}, {
 			"id": 2,
 			....
-		} 
-	]
+		}]
 }
 ```
 
-Where a Restaurant object is:
+The following table describes the fields of each Restaurant object in the response:
 
 | Field           | Type        | Description                                     |
 | ----------------|-------------|-------------------------------------------------|
-| id	            | Integer	    | A unique number identifier for the restaurant. |
-| restaurant_name	| String	    | The name of the restaurant. |
-| street          |	String	    | The city where the restaurant is located. |
-| city	          | String	    | The state where the restaurant is located. |
-| state           |	String	    | The state where the restaurant is located. |
-| cuisine	        | String	    | The type of cuisine served by the restaurant. |
-| price	          | Integer	    | The price range of the restaurant as a number from 1 to 4. |
-| rating	        | Integer	    | The average rating of the restaurant as a number from 1 to 5. |
+| `id`	            | Integer	    | A unique number identifier for the restaurant. |
+| `restaurant_name`	| String	    | The name of the restaurant. |
+| `street`          |	String	    | The city where the restaurant is located. |
+| `city`	          | String	    | The state where the restaurant is located. |
+| `state`           |	String	    | The state where the restaurant is located. |
+| `cuisine`	        | String	    | The type of cuisine served by the restaurant. |
+| `price`	          | Integer	    | The price range of the restaurant as a number from 1 to 4. |
+| `rating`	        | Integer	    | The average rating of the restaurant as a number from 1 to 5. |
+
+### Getting restaurant by ID
+Returns the restaurant details for a specific restaurant `id`.
+
+```
+GET https://foodfinder.com/restaurants/{id}
+```
+
+Path Parameters:
+| Code                      | Description                                                                               |
+| ------------------------- |-------------------------------------------------------------------------------------------|
+| `id`	                    | The id value for the restaurant you want to look up. |
+
+Example cURL request:
+The following is an example request where `id` is 1.
+
+```
+curl -I -X GET https://foodfinder.com/restaurants/1
+```
+
+Example response:
+The response contains a single Restaurant object within a data envelope. The following is a sample response from the /restaurants/{id} 
+endpoint:
+
+```
+HTTP 200 OK
+Content-Type: application/json
+
+{
+	"data": [{
+			"id": 1,
+			"restaurant_name": "Cookie Time",
+			"street": "456 West Avenue",
+			"city": "San Jose",
+			"state": "CA",
+			"cuisine": "Dessert",
+			"price": "4-9"
+		}]
+}
+```
+
+The following table describes the fields of each Restaurant object in the response:
+
+| Field           | Type        | Description                                     |
+| ----------------|-------------|-------------------------------------------------|
+| `id`	            | Integer	    | A unique number identifier for the restaurant. |
+| `restaurant_name`	| String	    | The name of the restaurant. |
+| `street`          |	String	    | The city where the restaurant is located. |
+| `city`	          | String	    | The state where the restaurant is located. |
+| `state`           |	String	    | The state where the restaurant is located. |
+| `cuisine`	        | String	    | The type of cuisine served by the restaurant. |
+| `price`	          | Integer	    | The price range of the restaurant as a number from 1 to 4. |
+| `rating`	        | Integer	    | The average rating of the restaurant as a number from 1 to 5. |
+
+
 
 
 
