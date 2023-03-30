@@ -18,7 +18,7 @@ To run the FoodFinder application, you will need to install Node.js using `Node 
 
 The client and server must be running concurrently to run the application.
 
-## FoodFinder Features
+## Application Features
 FoodFinder lets you:
 - Create a personal account
 - Browse restaurants
