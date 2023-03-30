@@ -4,7 +4,7 @@
 # FoodFinder API
 This file contains the documentation for [FoodFinder](https://github.com/vsupapo/FoodFinder)'s API.
 
-## Contents
+### Contents
 - [Overview](#Overview)
   - [Authentication](#Authentication)
   - [Endpoints](#Endpoints)
