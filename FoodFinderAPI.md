@@ -177,7 +177,7 @@ curl -I -X GET https://foodfinder.com/restaurants?restaurant_name=Cream
 ```
 
 Example response:
-The response contains a list of Restaurant objects within a data envelope. The following is a sample response from the `/restaurants?restaurant_name={restaurant_name}`endpoint:
+The response contains a list of Restaurant objects within a data envelope. The following is a sample response from the `/restaurants?restaurant_name={restaurant_name}` endpoint:
 
 ```
 HTTP 200 OK
@@ -212,7 +212,68 @@ The following table describes the fields of each Restaurant object in the respon
 | `price`	          | Integer	    | The price range of the restaurant as a number from 1 to 4. |
 | `rating`	        | Integer	    | The average rating of the restaurant as a number from 1 to 5. |
 
+### Creating a new restaurant
+Creates a restaurant object using the provided Restaurant object details. 
 
+Endpoint:
+```
+POST https://foodfinder.com/restaurants
+```
+
+Parameters:
+The values for the following fields can be defined when creating a new Restaurant object:
+
+| Field           | Type        | Description                                     |
+| ----------------|-------------|-------------------------------------------------|
+| `restaurant_name`	| String	    | The name of the restaurant. |
+| `street`          |	String	    | The city where the restaurant is located. |
+| `city`	          | String	    | The state where the restaurant is located. |
+| `state`           |	String	    | The state where the restaurant is located. |
+| `cuisine`	        | String	    | The type of cuisine served by the restaurant. |
+| `price`	          | Integer	    | The price range of the restaurant as a number from 1 to 4. |
+| `rating`	        | Integer	    | The average rating of the restaurant as a number from 1 to 5. |
+
+Example cURL request:
+
+```
+curl -I -X POST -H 'Content-Type: application/json'
+-d '{"restaurant_name":"Pizza Palace","street":"123 South Street",
+"city":"San Jose", "state":"CA", "cuisine":"Italian", 
+"price":"4-9"}' http://www.foodfinder.com/restaurants
+```
+
+Example response:
+The response contains a single Restaurant object within a data envelope. The following is an example response from the `/restaurants` endpoint:
+
+```
+HTTP 200 OK
+Content-Type: application/json
+
+{
+	"data": [{
+			"id": 225,
+			"restaurant_name": "Pizza Palace",
+			"street": "123 South Street",
+			"city": "San Jose",
+			"state": "CA",
+			"cuisine": "Italian",
+			"price": "4-9"
+		}]
+}
+```
+
+The following table describes the fields of each Restaurant object in the response:
+
+| Field           | Type        | Description                                     |
+| ----------------|-------------|-------------------------------------------------|
+| `id`	            | Integer	    | A unique number identifier for the restaurant. |
+| `restaurant_name`	| String	    | The name of the restaurant. |
+| `street`          |	String	    | The city where the restaurant is located. |
+| `city`	          | String	    | The state where the restaurant is located. |
+| `state`           |	String	    | The state where the restaurant is located. |
+| `cuisine`	        | String	    | The type of cuisine served by the restaurant. |
+| `price`	          | Integer	    | The price range of the restaurant as a number from 1 to 4. |
+| `rating`	        | Integer	    | The average rating of the restaurant as a number from 1 to 5. |
 
 
 
