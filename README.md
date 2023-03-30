@@ -1,5 +1,7 @@
 # FoodFinder
 
+![image](https://user-images.githubusercontent.com/47260573/124221499-bf193200-dab4-11eb-8992-db22ba3178f8.png)
+
 ## Description
 FoodFinder simplifies your group dining experience by finding the best restaurants catered to your group preferences. This RESTful web application developed by Team Druids provides access to restaurant data in the form of JSON responses through the FoodFinder API.
 
