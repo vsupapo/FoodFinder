@@ -38,20 +38,20 @@ Possible response codes include:
 ## Resources
 
 ### Getting all restaurants
-This endpoint returns the details of all restaurants.
+Returns the details of all restaurants.
 
-Endpoint:
+Endpoint:  
 ```
 GET https://foodfinder.com/restaurants
 ```
 
-Example cURL request:
+Example cURL request:  
 
 ```
 curl -I -X GET https://foodfinder.com/restaurants
 ```
 
-Example response:
+Example response:  
 The response contains a list of Restaurant objects within a data envelope. The following is an example response from the `/restaurants` endpoint:
 
 ```
@@ -90,7 +90,7 @@ The following table describes the fields of each Restaurant object in the respon
 ### Getting restaurant by ID
 Returns the restaurant details for a specific restaurant ID.
 
-Endpoint:
+Endpoint:  
 ```
 GET https://foodfinder.com/restaurants/{id}
 ```
@@ -98,16 +98,16 @@ GET https://foodfinder.com/restaurants/{id}
 Path Parameters:
 | Field       | Description                                                 |
 | ----------- |-------------------------------------------------------------|
-| `id`	      | The id value for the restaurant you want to look up. |
+| `id`	      | The ID value for the restaurant you want to look up. |
 
-Example cURL request:
+Example cURL request:  
 The following is an example request where `id` is "1".
 
 ```
 curl -I -X GET https://foodfinder.com/restaurants/1
 ```
 
-Example response:
+Example response:  
 The response contains a single Restaurant object within a data envelope. The following is a sample response from the `/restaurants/{id}` endpoint:
 
 ```
@@ -143,7 +143,7 @@ The following table describes the fields of each Restaurant object in the respon
 ### Getting restaurant by keyword
 Returns the details of all restaurants with a specific keyword. 
 
-Endpoints:
+Endpoints:  
 ```
 GET https://foodfinder.com/restaurants?restaurant_name={restaurant_name}
 ```
@@ -169,14 +169,14 @@ Query String Parameters:
 | `price`             | Optional    | Integer   | The price range of the restaurant as a number from 1 to 4. |
 | `rating`            | Optional    | Integer   | The average rating of the restaurant as a number from 1 to 5. |
 
-Example cURL request:
+Example cURL request:  
 The following is an example request where `restaurant_name` is "Cream".
 
 ```
 curl -I -X GET https://foodfinder.com/restaurants?restaurant_name=Cream
 ```
 
-Example response:
+Example response:  
 The response contains a list of Restaurant objects within a data envelope. The following is a sample response from the `/restaurants?restaurant_name={restaurant_name}` endpoint:
 
 ```
@@ -220,7 +220,7 @@ Endpoint:
 POST https://foodfinder.com/restaurants
 ```
 
-Parameters:
+Additonal Parameters:  
 The values for the following fields can be defined when creating a new Restaurant object:
 
 | Field           | Type        | Description                                     |
@@ -233,7 +233,7 @@ The values for the following fields can be defined when creating a new Restauran
 | `price`	          | Integer	    | The price range of the restaurant as a number from 1 to 4. |
 | `rating`	        | Integer	    | The average rating of the restaurant as a number from 1 to 5. |
 
-Example cURL request:
+Example cURL request:  
 
 ```
 curl -I -X POST -H 'Content-Type: application/json'
@@ -242,7 +242,7 @@ curl -I -X POST -H 'Content-Type: application/json'
 "price":"4-9"}' http://www.foodfinder.com/restaurants
 ```
 
-Example response:
+Example response:  
 The response contains a single Restaurant object within a data envelope. The following is an example response from the `/restaurants` endpoint:
 
 ```
@@ -275,7 +275,72 @@ The following table describes the fields of each Restaurant object in the respon
 | `price`	          | Integer	    | The price range of the restaurant as a number from 1 to 4. |
 | `rating`	        | Integer	    | The average rating of the restaurant as a number from 1 to 5. |
 
+### Updating a restaurant
+Updates a restaurant object using the provided Restaurant object details. 
 
+Endpoint:  
+```
+PUT https://foodfinder.com/restaurants/{id}
+```
+
+Path Parameters:  
+| Field       | Description                                                 |
+| ----------- |-------------------------------------------------------------|
+| `id`	      | The ID value for the restaurant you want to look up. |
+
+Additional Parameters:  
+The values for the following fields can be changed when updating a Restaurant object:
+
+| Field           | Type        | Description                                     |
+| ----------------|-------------|-------------------------------------------------|
+| `restaurant_name`	| String	    | The name of the restaurant. |
+| `street`          |	String	    | The city where the restaurant is located. |
+| `city`	          | String	    | The state where the restaurant is located. |
+| `state`           |	String	    | The state where the restaurant is located. |
+| `cuisine`	        | String	    | The type of cuisine served by the restaurant. |
+| `price`	          | Integer	    | The price range of the restaurant as a number from 1 to 4. |
+| `rating`	        | Integer	    | The average rating of the restaurant as a number from 1 to 5. |
+
+Example cURL request:  
+The following is an example request where `id` is "1".
+
+```
+curl -I -X PUT -H 'Content-Type: application/json'
+-d '{"price":"2-5"}' http://www.foodfinder.com/restaurants/225
+```
+
+Example response:  
+The response contains a single Restaurant object within a data envelope. The following is a sample response from the `/restaurants/{id}` endpoint:
+
+```
+HTTP 200 OK
+Content-Type: application/json
+
+{
+	"data": [{
+			"id": 225,
+			"restaurant_name": "Pizza Palace",
+			"street": "123 South Street",
+			"city": "San Jose",
+			"state": "CA",
+			"cuisine": "Italian",
+			"price": "2-5"
+		}]
+}
+```
+
+The following table describes the fields of each Restaurant object in the response:
+
+| Field           | Type        | Description                                     |
+| ----------------|-------------|-------------------------------------------------|
+| `id`	            | Integer	    | A unique number identifier for the restaurant. |
+| `restaurant_name`	| String	    | The name of the restaurant. |
+| `street`          |	String	    | The city where the restaurant is located. |
+| `city`	          | String	    | The state where the restaurant is located. |
+| `state`           |	String	    | The state where the restaurant is located. |
+| `cuisine`	        | String	    | The type of cuisine served by the restaurant. |
+| `price`	          | Integer	    | The price range of the restaurant as a number from 1 to 4. |
+| `rating`	        | Integer	    | The average rating of the restaurant as a number from 1 to 5. |
 
 
 
