@@ -12,11 +12,11 @@ To run the FoodFinder application, you will need to install Node.js using `Node 
 1. Clone the repository
 2. CD into the project directory
 3. CD into the server directory
-  - Run `npm install` to install project dependencies
-  - Run `npm run devStart`  to run the dev environment on `port 4000`
+ * Run `npm install` to install project dependencies
+ * Run `npm run devStart`  to run the dev environment on `port 4000`
 4. CD into the client directory
-  - Run `npm install`
-  - Run `npm start` to start the react environment on `port 3000`
+ * Run `npm install`
+ * Run `npm start` to start the react environment on `port 3000`
 
 The client and server must be running concurrently to run the application.
 
