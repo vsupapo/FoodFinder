@@ -46,7 +46,7 @@ FoodFinder restaurant results include details such as:
 | `rating`	        | The average rating of the restaurant as a number from 1 to 5. |
 
 ## API Documentation
-The FoodFinder API can be found [here](#https://github.com/vsupapo/FoodFinderAPI/blob/main/README.md).
+The FoodFinder API can be found [here](https://github.com/vsupapo/FoodFinderAPI/blob/main/README.md).
 
 ## Credits
 *A special thanks to Team Druids*
