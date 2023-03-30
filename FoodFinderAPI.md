@@ -98,7 +98,7 @@ GET https://foodfinder.com/restaurants/{id}
 #### Path Parameters:
 | Field       | Description                                                 |
 | ----------- |-------------------------------------------------------------|
-| `id`	      | The ID value for the restaurant you want to look up. |
+| `id`	      | The ID value for the Restaurant object to search for. |
 
 #### Example cURL request:  
 The following is an example request where `id` is "1".
@@ -213,7 +213,7 @@ The following table describes the fields of each Restaurant object in the respon
 | `rating`	        | Integer	    | The average rating of the restaurant as a number from 1 to 5. |
 
 ### Creating a new restaurant
-Creates a restaurant object using the provided Restaurant object details. 
+Creates a Restaurant object using the provided Restaurant object details. 
 
 #### Endpoint:
 ```
@@ -276,7 +276,7 @@ The following table describes the fields of each Restaurant object in the respon
 | `rating`	        | Integer	    | The average rating of the restaurant as a number from 1 to 5. |
 
 ### Updating a restaurant
-Updates a restaurant object using the provided Restaurant object details. 
+Updates a Restaurant object with a specific ID using the provided Restaurant object details. 
 
 #### Endpoint:  
 ```
@@ -286,7 +286,7 @@ PUT https://foodfinder.com/restaurants/{id}
 #### Path Parameters:  
 | Field       | Description                                                 |
 | ----------- |-------------------------------------------------------------|
-| `id`	      | The ID value for the restaurant you want to look up. |
+| `id`	      | The ID value for the Restaurant object to be updated. |
 
 #### Additional Parameters:  
 The values for the following fields can be changed when updating a Restaurant object:
@@ -302,7 +302,7 @@ The values for the following fields can be changed when updating a Restaurant ob
 | `rating`	        | Integer	    | The average rating of the restaurant as a number from 1 to 5. |
 
 #### Example cURL request:  
-The following is an example request where `id` is "1".
+The following is an example request where `id` is "255" and the updated `price` is "2-5".
 
 ```
 curl -I -X PUT -H 'Content-Type: application/json'
@@ -342,7 +342,42 @@ The following table describes the fields of each Restaurant object in the respon
 | `price`	          | Integer	    | The price range of the restaurant as a number from 1 to 4. |
 | `rating`	        | Integer	    | The average rating of the restaurant as a number from 1 to 5. |
 
+### Deleting a restaurant
+Deletes a Restaurant object with a specific restaurant ID. 
 
+#### Endpoint:  
+```
+DELETE https://foodfinder.com/restaurants/{id}
+```
 
+#### Path Parameters:  
+| Field       | Description                                                 |
+| ----------- |-------------------------------------------------------------|
+| `id`	      | The ID value for the Restaurant object to be deleted. |
 
+#### Example cURL request:  
+The following is an example request where `id` is "225".
 
+```
+curl -I -X DELETE http://www.foodfinder.com/restaurants/225
+```
+
+#### Example response:  
+The response contains a single Restaurant object within a data envelope. The following is a sample response from the `/restaurants/{id}` endpoint:
+
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+	"status": success
+	"message": "Successfully deleted restaurant with id: 225."
+}
+```
+
+The following table describes the fields in the body of the response:
+
+| Field           | Type        | Description                                     |
+| ----------------|-------------|-------------------------------------------------|
+| `status`	  | String      | The status of the request set to "success" upon request fulfillment or "unsuccessful" upon failure. |
+| `message`	  | String      | A message providing more details on request status. |
