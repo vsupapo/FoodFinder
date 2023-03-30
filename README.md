@@ -16,7 +16,7 @@ To run the FoodFinder application, you will need to install Node.js using `Node 
   - Run `npm install`
   - Run `npm start` to start the react environment on `port 3000`
 
-The client and server *must* be running concurrently to run the application.
+The client and server must be running concurrently to run the application.
 
 ## FoodFinder Features
 FoodFinder lets you:
