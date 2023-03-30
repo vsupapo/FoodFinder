@@ -27,9 +27,8 @@ FoodFinder lets you:
 * Search for restaurants
 * Find and add friends
 * Set your personal restaurant preferences
-* View your friends' restaurant preferences
 
-FoodFinder lets you save your personal preferences for restaurants including:
+FoodFinder lets you save personal preferences for restaurants including:
 | Field             | Description                                     |
 | ------------------|-------------------------------------------------|
 | `cuisine`	        | The type of cuisine served by the restaurant. |
