@@ -40,18 +40,18 @@ Possible response codes include:
 ### Getting all restaurants
 Returns the details of all restaurants.
 
-Endpoint:  
+#### Endpoint:  
 ```
 GET https://foodfinder.com/restaurants
 ```
 
-Example cURL request:  
+#### Example cURL request:  
 
 ```
 curl -I -X GET https://foodfinder.com/restaurants
 ```
 
-Example response:  
+#### Example response:  
 The response contains a list of Restaurant objects within a data envelope. The following is an example response from the `/restaurants` endpoint:
 
 ```
@@ -90,24 +90,24 @@ The following table describes the fields of each Restaurant object in the respon
 ### Getting restaurant by ID
 Returns the restaurant details for a specific restaurant ID.
 
-Endpoint:  
+#### Endpoint:  
 ```
 GET https://foodfinder.com/restaurants/{id}
 ```
 
-Path Parameters:
+#### Path Parameters:
 | Field       | Description                                                 |
 | ----------- |-------------------------------------------------------------|
 | `id`	      | The ID value for the restaurant you want to look up. |
 
-Example cURL request:  
+#### Example cURL request:  
 The following is an example request where `id` is "1".
 
 ```
 curl -I -X GET https://foodfinder.com/restaurants/1
 ```
 
-Example response:  
+#### Example response:  
 The response contains a single Restaurant object within a data envelope. The following is a sample response from the `/restaurants/{id}` endpoint:
 
 ```
@@ -143,7 +143,7 @@ The following table describes the fields of each Restaurant object in the respon
 ### Getting restaurant by keyword
 Returns the details of all restaurants with a specific keyword. 
 
-Endpoints:  
+#### Endpoints:  
 ```
 GET https://foodfinder.com/restaurants?restaurant_name={restaurant_name}
 ```
@@ -160,7 +160,7 @@ GET https://foodfinder.com/restaurants?price={price}
 GET https://foodfinder.com/restaurants?rating={rating}
 ```
 
-Query String Parameters:
+#### Query String Parameters:
 | Field               | Type        | Required? | Description                                       |
 | --------------------|-------------|-----------|---------------------------------------------------|
 | `restaurant_name`   | String      | Optional  | The name of the restaurant. |
@@ -169,14 +169,14 @@ Query String Parameters:
 | `price`             | Optional    | Integer   | The price range of the restaurant as a number from 1 to 4. |
 | `rating`            | Optional    | Integer   | The average rating of the restaurant as a number from 1 to 5. |
 
-Example cURL request:  
+#### Example cURL request:  
 The following is an example request where `restaurant_name` is "Cream".
 
 ```
 curl -I -X GET https://foodfinder.com/restaurants?restaurant_name=Cream
 ```
 
-Example response:  
+#### Example response:  
 The response contains a list of Restaurant objects within a data envelope. The following is a sample response from the `/restaurants?restaurant_name={restaurant_name}` endpoint:
 
 ```
@@ -215,12 +215,12 @@ The following table describes the fields of each Restaurant object in the respon
 ### Creating a new restaurant
 Creates a restaurant object using the provided Restaurant object details. 
 
-Endpoint:
+#### Endpoint:
 ```
 POST https://foodfinder.com/restaurants
 ```
 
-Additonal Parameters:  
+#### Additonal Parameters:  
 The values for the following fields can be defined when creating a new Restaurant object:
 
 | Field           | Type        | Description                                     |
@@ -233,7 +233,7 @@ The values for the following fields can be defined when creating a new Restauran
 | `price`	          | Integer	    | The price range of the restaurant as a number from 1 to 4. |
 | `rating`	        | Integer	    | The average rating of the restaurant as a number from 1 to 5. |
 
-Example cURL request:  
+#### Example cURL request:  
 
 ```
 curl -I -X POST -H 'Content-Type: application/json'
@@ -242,7 +242,7 @@ curl -I -X POST -H 'Content-Type: application/json'
 "price":"4-9"}' http://www.foodfinder.com/restaurants
 ```
 
-Example response:  
+#### Example response:  
 The response contains a single Restaurant object within a data envelope. The following is an example response from the `/restaurants` endpoint:
 
 ```
@@ -278,17 +278,17 @@ The following table describes the fields of each Restaurant object in the respon
 ### Updating a restaurant
 Updates a restaurant object using the provided Restaurant object details. 
 
-Endpoint:  
+#### Endpoint:  
 ```
 PUT https://foodfinder.com/restaurants/{id}
 ```
 
-Path Parameters:  
+#### Path Parameters:  
 | Field       | Description                                                 |
 | ----------- |-------------------------------------------------------------|
 | `id`	      | The ID value for the restaurant you want to look up. |
 
-Additional Parameters:  
+#### Additional Parameters:  
 The values for the following fields can be changed when updating a Restaurant object:
 
 | Field           | Type        | Description                                     |
@@ -301,7 +301,7 @@ The values for the following fields can be changed when updating a Restaurant ob
 | `price`	          | Integer	    | The price range of the restaurant as a number from 1 to 4. |
 | `rating`	        | Integer	    | The average rating of the restaurant as a number from 1 to 5. |
 
-Example cURL request:  
+#### Example cURL request:  
 The following is an example request where `id` is "1".
 
 ```
@@ -309,7 +309,7 @@ curl -I -X PUT -H 'Content-Type: application/json'
 -d '{"price":"2-5"}' http://www.foodfinder.com/restaurants/225
 ```
 
-Example response:  
+#### Example response:  
 The response contains a single Restaurant object within a data envelope. The following is a sample response from the `/restaurants/{id}` endpoint:
 
 ```
