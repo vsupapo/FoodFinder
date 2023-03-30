@@ -55,7 +55,7 @@ curl -I -X GET https://foodfinder.com/restaurants
 The response contains a list of Restaurant objects within a data envelope. The following is an example response from the `/restaurants` endpoint:
 
 ```
-HTTP 200 OK
+HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
@@ -111,7 +111,7 @@ curl -I -X GET https://foodfinder.com/restaurants/1
 The response contains a single Restaurant object within a data envelope. The following is a sample response from the `/restaurants/{id}` endpoint:
 
 ```
-HTTP 200 OK
+HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
@@ -180,7 +180,7 @@ curl -I -X GET https://foodfinder.com/restaurants?restaurant_name=Cream
 The response contains a list of Restaurant objects within a data envelope. The following is a sample response from the `/restaurants?restaurant_name={restaurant_name}` endpoint:
 
 ```
-HTTP 200 OK
+HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
@@ -246,7 +246,7 @@ curl -I -X POST -H 'Content-Type: application/json'
 The response contains a single Restaurant object within a data envelope. The following is an example response from the `/restaurants` endpoint:
 
 ```
-HTTP 200 OK
+HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
@@ -313,7 +313,7 @@ curl -I -X PUT -H 'Content-Type: application/json'
 The response contains a single Restaurant object within a data envelope. The following is a sample response from the `/restaurants/{id}` endpoint:
 
 ```
-HTTP 200 OK
+HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
