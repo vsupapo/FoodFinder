@@ -379,5 +379,5 @@ The following table describes the fields in the body of the response:
 
 | Field           | Type        | Description                                     |
 | ----------------|-------------|-------------------------------------------------|
-| `status`	  | String      | The status of the request set to "success" upon request fulfillment or "unsuccessful" upon failure. |
+| `status`	  | String      | The status of the request set to "success" upon fulfillment or "unsuccessful" upon failure. |
 | `message`	  | String      | A message providing more details on request status. |
