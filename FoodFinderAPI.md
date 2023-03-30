@@ -162,7 +162,7 @@ GET https://foodfinder.com/restaurants?rating={rating}
 
 Query String Parameters:
 | Field               | Type        | Required? | Description                                       |
-| -----------         |-------------|---------------------------------------------------------------|
+| --------------------|-------------|-----------|---------------------------------------------------|
 | `restaurant_name`   | String      | Optional  | The name of the restaurant. |
 | `city`              | Optional    | String    | The city where the restaurant is located. |
 | `cuisine`           | Optional    | String    | The type of cuisine served by the restaurant. |
