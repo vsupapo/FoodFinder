@@ -7,6 +7,11 @@
   - [Response Codes](#Response-Codes)
 - [Resources](#Resources)
   - [Getting all restaurants](#Getting-all-restaurants)
+  - [Getting restaurant by ID](#Getting-restaurant-by-ID)
+  - [Getting restaurant by keyword](#Getting-restaurant-by-keyword)
+  - [Creating a new restaurant](#Creating-a-new-restaurant)
+  - [Updating a restaurant](#Updating-a-new-restaurant)
+  - [Deleting a restaurant](#Deleting-a-restaurant)
 
 ## Overview
 The FoodFinder API provides information about restaurants, including restaurant location, cuisine, price range and rating. Our API is organized around REST and returns JSON-formatted responses along with standard HTTP response codes. All requests are made to endpoints beginning:
@@ -148,8 +153,8 @@ The following table describes the fields of each Restaurant object in the respon
 | `price`	          | Integer	    | The price range of the restaurant as a number from 1 to 4. |
 | `rating`	        | Integer	    | The average rating of the restaurant as a number from 1 to 5. |
 
-### Getting restaurant by keyword
-Returns the details of all restaurants with a specific keyword. 
+### Getting restaurants by keyword
+Returns the details of all restaurants using a specific keyword. 
 
 #### Endpoints:  
 ```
