@@ -65,14 +65,12 @@ GET https://foodfinder.com/restaurants
 ```
 
 #### Example cURL request:  
-
 ```
 curl -I -X GET https://foodfinder.com/restaurants
 ```
 
 #### Example response:  
 The response contains a list of Restaurant objects within a data envelope. The following is an example response from the `/restaurants` endpoint:
-
 ```
 HTTP/1.1 200 OK
 Content-Type: application/json
@@ -94,7 +92,6 @@ Content-Type: application/json
 ```
 
 The following table describes the fields of each Restaurant object in the response:
-
 | Field           | Type        | Description                                     |
 | ----------------|-------------|-------------------------------------------------|
 | `id`	            | Integer	    | A unique number identifier for the restaurant. |
@@ -121,14 +118,12 @@ GET https://foodfinder.com/restaurants/{id}
 
 #### Example cURL request:  
 The following is an example request where `id` is "1".
-
 ```
 curl -I -X GET https://foodfinder.com/restaurants/1
 ```
 
 #### Example response:  
 The response contains a single Restaurant object within a data envelope. The following is a sample response from the `/restaurants/{id}` endpoint:
-
 ```
 HTTP/1.1 200 OK
 Content-Type: application/json
@@ -147,7 +142,6 @@ Content-Type: application/json
 ```
 
 The following table describes the fields of each Restaurant object in the response:
-
 | Field           | Type        | Description                                     |
 | ----------------|-------------|-------------------------------------------------|
 | `id`	            | Integer	    | A unique number identifier for the restaurant. |
@@ -160,7 +154,12 @@ The following table describes the fields of each Restaurant object in the respon
 | `rating`	        | Integer	    | The average rating of the restaurant as a number from 1 to 5. |
 
 ### Getting restaurants by keyword
-Returns the details of all restaurants using a specific keyword. 
+Returns the details of all restaurants with a specific value for:
+- `restaurant_name`
+- `city`
+- `cuisine`
+- `price range`
+- `rating`
 
 #### Endpoints:  
 ```
@@ -190,7 +189,6 @@ GET https://foodfinder.com/restaurants?rating={rating}
 
 #### Example cURL request:  
 The following is an example request where `restaurant_name` is "Cream".
-
 ```
 curl -I -X GET https://foodfinder.com/restaurants?restaurant_name=Cream
 ```
