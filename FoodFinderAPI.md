@@ -1,5 +1,13 @@
 # FoodFinder API
 
+## Contents
+- [Overview](#Overview)
+  - [Authentication](#Authentication)
+  - [Endpoints](#Endpoints)
+  - [Response Codes](#Response-Codes)
+- [Resources](#Resources)
+  - [Getting all restaurants](#Getting-all-restaurants)
+
 ## Overview
 The FoodFinder API provides information about restaurants, including restaurant location, cuisine, price range and rating. Our API is organized around REST and returns JSON-formatted responses along with standard HTTP response codes. All requests are made to endpoints beginning:
 `https://foodfinder.com`
