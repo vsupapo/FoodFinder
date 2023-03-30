@@ -239,7 +239,7 @@ Creates a Restaurant object using the provided Restaurant object details.
 POST https://foodfinder.com/restaurants
 ```
 
-#### Additonal Parameters:  
+#### Object Parameters:  
 The values for the following fields can be defined when creating a new Restaurant object:
 
 | Field           | Type        | Description                                     |
@@ -307,7 +307,7 @@ PUT https://foodfinder.com/restaurants/{id}
 | ----------- |-------------------------------------------------------------|
 | `id`	      | The ID value for the Restaurant object to be updated. |
 
-#### Additional Parameters:  
+#### Object Parameters:  
 The values for the following fields can be changed when updating a Restaurant object:
 
 | Field           | Type        | Description                                     |
