@@ -22,12 +22,12 @@ The client and server must be running concurrently to run the application.
 
 ## Application Features
 FoodFinder lets you:
-- Create a personal account
-- Browse restaurants
-- Search for restaurants
-- Find and add friends
-- Set your personal restaurant preferences
-- View your friends' restaurant preferences
+* Create a personal account
+* Browse restaurants
+* Search for restaurants
+* Find and add friends
+* Set your personal restaurant preferences
+* View your friends' restaurant preferences
 
 FoodFinder lets you save your personal preferences for restaurants including:
 | Field             | Description                                     |
