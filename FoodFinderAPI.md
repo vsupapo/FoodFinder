@@ -2,6 +2,7 @@
 > **The FoodFinder API is no longer supported.** The database deployment and maintenance period has ended for this project.
 
 # FoodFinder API
+This file contains the documentation for [FoodFinder](https://github.com/vsupapo/FoodFinder)'s API.
 
 ## Contents
 - [Overview](#Overview)
